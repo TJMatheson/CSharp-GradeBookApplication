@@ -112,10 +112,12 @@ namespace GradeBook.GradeBooks
             int weight = 0;
             if (IsWeighted)
             {
-                if(studentType == StudentType.DualEnrolled || studentType == StudentType.Standard)
+                if (studentType == StudentType.DualEnrolled || studentType == StudentType.Honors)
                 {
                     weight = 1;
                 }
+                else
+                    weight = 0;
             }
             switch (letterGrade)
             {
